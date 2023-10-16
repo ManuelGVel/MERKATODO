@@ -55,3 +55,41 @@ $(document).ready(function() {
     // End roduct detail
 
 });
+
+// Form Login
+document.addEventListener("DOMContentLoaded", function() {
+  
+  const loginButton = document.getElementById("loginButton");
+  loginButton.addEventListener("click", function() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      
+      if (email === "merkatodo@gmail.com" && password === "12345678") {
+          window.location.href = "admin-shop.html";
+      } else {
+          alert("Credenciales incorrectas. Intente nuevamente.");
+      }
+  });
+});
+
+// Form Agregar productos
+document.addEventListener("DOMContentLoaded", function() {
+  
+  const addButton = document.getElementById("addButton");
+  addButton.addEventListener("click", function() {
+      const id = document.getElementById("id").value;
+      const name = document.getElementById("nombre").value;
+      const brand = document.getElementById("marca").value;
+      const description = document.getElementById("descripcion").value;
+      const measurement = document.getElementById("medida").value;
+      const quantity = document.getElementById("cantidad").value;
+      const stock = document.getElementById("stock").value;
+      const value = document.getElementById("precio").value;
+      
+      if (id === "" || name === "" || brand === "" || description === "" || measurement === "" || quantity === "" || stock === "" || value === "") {
+        alert("Complete todos los campos");
+      } else {
+        alert("Producto agregado");
+      }
+  });
+});
